@@ -1,7 +1,7 @@
 # MELVI
 Marine Biological Laboratory (MBL) Multiple Element Limitation Model (MEL)
 
-The Multiple Element Limitation (MEL) model simulates changes in carbon (C), nitrogen (N), and phosphorus(P) stocks in and fluxes among plant biomass, Phase I and Phase II (Melillo et al. 1989) soil organic matter (SOM), detritus, and inorganic nutrients as well as changes in soil water content. Daily driving variables are atmospheric CO_2, maximum and minimum air temperature, precipitation, total shortwave radiation, and nutrient inputs.
+The Multiple Element Limitation (MEL) model simulates changes in carbon (C), nitrogen (N), and phosphorus(P) stocks in and fluxes among plant biomass, Phase I and Phase II (Melillo et al. 1989) soil organic matter (SOM), detritus, and inorganic nutrients as well as changes in soil water content. Daily driving variables are atmospheric CO2, maximum and minimum air temperature, precipitation, total shortwave radiation, and nutrient inputs.
 
 The MEL model couples ecosystem C, N, P, and water cycles and generates output for all stocks and fluxes on a daily time step. The differential equations that describe the mass balance for each of the simulated components of the ecosystem are solved numerically using a 4th-5th order Runge-Kutta integrator with a time-step size that adapts with each pass through the integrator to optimize precision and computation time (Press et al. 1986).  The model is coded in Lazarus 2.0.12 (2020) Free Pascal and runs on a PC or Mac computer.
 
