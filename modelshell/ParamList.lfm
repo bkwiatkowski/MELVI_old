@@ -1,0 +1,80 @@
+object FmParamList: TFmParamList
+  Left = 855
+  Height = 642
+  Top = 234
+  Width = 758
+  ActiveControl = btnSelect
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'Choose a parameter to display'
+  ClientHeight = 642
+  ClientWidth = 758
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '0.9.30'
+  object lbParamSymbols: TListBox
+    Left = 5
+    Height = 529
+    Top = 5
+    Width = 758
+    Columns = 3
+    ItemHeight = 0
+    OnClick = lbParamSymbolsClick
+    OnDblClick = btnSelectClick
+    TabOrder = 0
+  end
+  object btnSelect: TButton
+    Left = 8
+    Height = 25
+    Top = 552
+    Width = 100
+    Caption = '&Select'
+    OnClick = btnSelectClick
+    TabOrder = 1
+  end
+  object btnCancel: TButton
+    Left = 125
+    Height = 25
+    Top = 552
+    Width = 100
+    Caption = '&Cancel'
+    ModalResult = 2
+    TabOrder = 2
+  end
+  object lbParamNames: TListBox
+    Left = 0
+    Height = 529
+    Top = 0
+    Width = 758
+    Align = alTop
+    Columns = 3
+    ItemHeight = 0
+    OnClick = lbParamNamesClick
+    OnDblClick = btnSelectClick
+    TabOrder = 3
+  end
+  object rbParameterSymbol: TRadioButton
+    Left = 552
+    Height = 18
+    Top = 551
+    Width = 142
+    Caption = 'Show parameter s&ymbols'
+    Checked = True
+    OnClick = rbParameterSymbolClick
+    TabOrder = 4
+    TabStop = True
+  end
+  object rbParameterName: TRadioButton
+    Left = 552
+    Height = 18
+    Top = 574
+    Width = 134
+    Caption = 'Show parameter &names'
+    OnClick = rbParameterNameClick
+    TabOrder = 5
+  end
+end

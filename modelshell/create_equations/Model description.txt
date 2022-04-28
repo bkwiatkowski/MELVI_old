@@ -1,0 +1,49 @@
+Model Definition File - 25 character maximum for all text strings
+Model Name=  
+Model Version=	
+Model Time Unit= 
+Model Contact= 
+Model Contact Address Line 1= 
+Model Contact Address Line 2= 
+Model Contact Address Line 3= 
+
+States
+Name, Units, Symbol, Num array elements if applicable - Comma separated.
+
+
+End
+
+Process
+Process Name, Units, Symbol, Num of Parameters, Num array elements if applicable
+Parameters for each process: Name, Units, Symbol
+
+
+
+End
+
+Drive
+Name, Units, Symbol, Num array elements - Comma separated.
+
+
+End
+
+Other Double Variables
+Name, Units, Symbol - Comma separated.
+End
+
+Other Integer Variables
+Name, Units, Symbol - Comma separated.
+End
+
+Functions
+End Functions
+
+Equations – See the Computer Programming handout for instructions on writing equations in Pascal. Semicolons must end each statement.
+
+
+
+End Equations
+
+Derivatives – For array variables use jj as the array index. Same order as State var.
+
+

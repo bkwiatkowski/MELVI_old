@@ -1,0 +1,36 @@
+### Compiled source #####
+*.o
+*.ppu
+*.exe
+*.compiled
+*.or
+*.obj
+
+### Backup files ####
+backup
+create_equations/backup
+.*~
+
+### OS files ###
+.DS_Store
+.com.apple.timemachine.supported
+lib
+thumbs.db
+
+### Temporary files ###
+~*
+
+
+GeneticAlogtest/
+
+GeneticAlog/
+
+GeneticAlog - Copy/
+
+GeneticAlog - new/
+
+GeneticAlog - new - Copy/
+
+archive/
+
+testing/

@@ -1,0 +1,58 @@
+object FmProgress: TFmProgress
+  Left = 373
+  Height = 74
+  Top = 204
+  Width = 494
+  BorderIcons = []
+  BorderStyle = bsDialog
+  Caption = 'FmProgress'
+  ClientHeight = 74
+  ClientWidth = 494
+  Color = clBtnFace
+  DefaultMonitor = dmMainForm
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Arial'
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poOwnerFormCenter
+  LCLVersion = '1.8.4.0'
+  object LblBegin: TLabel
+    Left = 7
+    Height = 14
+    Top = 20
+    Width = 63
+    AutoSize = False
+    Caption = 'LblBegin'
+    ParentColor = False
+  end
+  object LblEnd: TLabel
+    Left = 401
+    Height = 14
+    Top = 20
+    Width = 80
+    Alignment = taRightJustify
+    AutoSize = False
+    Caption = 'LblEnd'
+    ParentColor = False
+  end
+  object PbRunStatus: TProgressBar
+    Left = 76
+    Height = 13
+    Top = 20
+    Width = 319
+    Smooth = True
+    TabOrder = 0
+    BarShowText = True
+  end
+  object BtnCancel: TButton
+    Left = 221
+    Height = 20
+    Top = 46
+    Width = 76
+    Caption = '&Cancel'
+    OnClick = BtnCancelClick
+    TabOrder = 1
+  end
+end

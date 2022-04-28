@@ -1,0 +1,74 @@
+object FmNote: TFmNote
+  Left = 247
+  Height = 488
+  Top = 117
+  Width = 688
+  ClientHeight = 488
+  ClientWidth = 688
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnShow = FormShow
+  Position = poDefault
+  LCLVersion = '1.6.0.4'
+  object MoDrivers: TMemo
+    Left = 0
+    Height = 440
+    Top = 0
+    Width = 688
+    Align = alClient
+    BorderStyle = bsNone
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Courier New'
+    Lines.Strings = (
+      ''
+      ''
+    )
+    ParentFont = False
+    ScrollBars = ssBoth
+    TabOrder = 0
+    WordWrap = False
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 48
+    Top = 440
+    Width = 688
+    Align = alBottom
+    ClientHeight = 48
+    ClientWidth = 688
+    TabOrder = 1
+    object BtnSaveFile: TButton
+      Left = 408
+      Height = 20
+      Top = 8
+      Width = 116
+      Caption = '&Save File'
+      ModalResult = 1
+      OnClick = BtnSaveFileClick
+      TabOrder = 0
+    end
+    object BtnClose: TButton
+      Left = 568
+      Height = 20
+      Top = 8
+      Width = 90
+      Cancel = True
+      Caption = '&Close'
+      ModalResult = 2
+      OnClick = BtnCloseClick
+      TabOrder = 1
+    end
+    object BtnChooseFile: TButton
+      Left = 3
+      Height = 20
+      Top = 11
+      Width = 160
+      Caption = 'C&hoose Driver File'
+      OnClick = BtnChooseFileClick
+      TabOrder = 2
+    end
+  end
+end

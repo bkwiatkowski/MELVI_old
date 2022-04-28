@@ -1,0 +1,121 @@
+object DataForm: TDataForm
+  Left = 190
+  Height = 292
+  Top = 145
+  Width = 733
+  HorzScrollBar.Page = 560
+  HorzScrollBar.Range = 560
+  VertScrollBar.Page = 99
+  VertScrollBar.Range = 99
+  VertScrollBar.Visible = False
+  ActiveControl = StringGrid1
+  ClientHeight = 292
+  ClientWidth = 733
+  Color = clBtnFace
+  DefaultMonitor = dmMainForm
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  Position = poOwnerFormCenter
+  LCLVersion = '1.6.4.0'
+  object PnlTop: TPanel
+    Left = 0
+    Height = 49
+    Top = 0
+    Width = 733
+    Align = alTop
+    ClientHeight = 49
+    ClientWidth = 733
+    TabOrder = 0
+    object BtnOK: TButton
+      Left = 390
+      Height = 20
+      Top = 13
+      Width = 71
+      Caption = '&OK'
+      Default = True
+      ModalResult = 1
+      OnClick = BtnOKClick
+      TabOrder = 0
+    end
+    object BtnCancel: TButton
+      Left = 478
+      Height = 20
+      Top = 13
+      Width = 81
+      Cancel = True
+      Caption = '&Cancel'
+      ModalResult = 2
+      OnClick = BtnCancelClick
+      TabOrder = 1
+    end
+    object BtPrint: TButton
+      Left = 190
+      Height = 19
+      Top = 13
+      Width = 61
+      Caption = '&Print'
+      Enabled = False
+      OnClick = BtPrintClick
+      TabOrder = 2
+      Visible = False
+    end
+  end
+  object StringGrid1: TStringGrid
+    Left = 0
+    Height = 243
+    Top = 49
+    Width = 733
+    Align = alClient
+    AutoAdvance = aaDown
+    ColCount = 6
+    Columns = <    
+      item
+        ButtonStyle = cbsCheckboxColumn
+        Title.Caption = 'Title'
+        ValueChecked = 'True'
+        ValueUnchecked = 'False'
+      end    
+      item
+        ButtonStyle = cbsCheckboxColumn
+        Title.Caption = 'Title'
+        ValueChecked = 'True'
+        ValueUnchecked = 'False'
+      end    
+      item
+        Title.Caption = 'Title'
+      end    
+      item
+        Title.Caption = 'Title'
+      end    
+      item
+        Title.Caption = 'Title'
+      end    
+      item
+        Title.Caption = 'Title'
+      end>
+    DefaultColWidth = 150
+    DefaultRowHeight = 25
+    ExtendedSelect = False
+    FixedCols = 0
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Arial'
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goDrawFocusSelected, goEditing]
+    ParentFont = False
+    TabOrder = 1
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Arial'
+    TitleStyle = tsStandard
+    OnCheckboxToggled = StringGrid1CheckboxToggled
+    OnDrawCell = StringGrid1DrawCell
+    OnSelectCell = StringGrid1SelectCell
+  end
+  object DlgPrint: TPrintDialog
+    Options = [poPageNums]
+    left = 160
+    top = 8
+  end
+end
