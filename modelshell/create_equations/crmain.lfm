@@ -1,0 +1,101 @@
+object FmMain: TFmMain
+  Left = 574
+  Height = 238
+  Top = 461
+  Width = 699
+  Anchors = []
+  Caption = 'Translate text model description to a modelshell equations.pas file'
+  ClientHeight = 238
+  ClientWidth = 699
+  Color = clWindow
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poDefaultPosOnly
+  LCLVersion = '1.6.4.0'
+  object MmInstruct: TMemo
+    Left = 8
+    Height = 72
+    Top = 8
+    Width = 672
+    Lines.Strings = (
+      'Select the model description file by clicking on the word "File name" or double clicking in the edit box.'
+      'Create Equations will create an equations.pas file and automatically save it in the same folder as the '
+      'model description file. Any existing equations.pas file will automatically be overwritten.'
+      ''
+    )
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+    TabStop = False
+    WantReturns = False
+  end
+  object LblEdFilename: TLabeledEdit
+    Left = 64
+    Height = 23
+    Top = 104
+    Width = 600
+    EditLabel.AnchorSideTop.Control = LblEdFilename
+    EditLabel.AnchorSideTop.Side = asrCenter
+    EditLabel.AnchorSideRight.Control = LblEdFilename
+    EditLabel.AnchorSideBottom.Control = LblEdFilename
+    EditLabel.AnchorSideBottom.Side = asrBottom
+    EditLabel.Left = 10
+    EditLabel.Height = 15
+    EditLabel.Top = 108
+    EditLabel.Width = 51
+    EditLabel.Caption = '&File name'
+    EditLabel.ParentColor = False
+    EditLabel.OnClick = ChooseDefFile
+    LabelPosition = lpLeft
+    TabOrder = 1
+    OnDblClick = ChooseDefFile
+  end
+  object BtnCreateCode: TButton
+    Left = 176
+    Height = 25
+    Top = 143
+    Width = 120
+    Caption = '&Create code'
+    OnClick = BtnCreateCodeClick
+    TabOrder = 2
+  end
+  object BtnClose: TButton
+    Left = 352
+    Height = 25
+    Top = 143
+    Width = 75
+    Caption = 'C&lose'
+    OnClick = BtnCloseClick
+    TabOrder = 3
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 215
+    Width = 699
+    Panels = <>
+  end
+  object HeaderControl1: THeaderControl
+    Left = 563
+    Height = 30
+    Top = 291
+    Width = 170
+    DragReorder = False
+    Sections = <>
+  end
+  object DlgOpenModelDef: TOpenDialog
+    Title = 'Open model description file'
+    DefaultExt = '.txt'
+    Filter = 'Text Files (*.txt)|*.txt|All Files (*.*)|*.*'
+    Options = [ofPathMustExist, ofFileMustExist, ofEnableSizing, ofViewDetail]
+    left = 528
+    top = 136
+  end
+  object DlgOpenEqPas: TOpenDialog
+    FileName = 'equationsblank.pas'
+    Options = [ofPathMustExist, ofFileMustExist, ofEnableSizing, ofViewDetail]
+    left = 47
+    top = 146
+  end
+end

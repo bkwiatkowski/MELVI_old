@@ -1,0 +1,475 @@
+object FmShellMain: TFmShellMain
+  Left = 1799
+  Height = 329
+  Top = 140
+  Width = 639
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'MBL Modelshell v6.5.4'
+  ClientHeight = 309
+  ClientWidth = 639
+  Color = 1416450
+  Font.Color = clBlack
+  Font.Height = -11
+  Font.Name = 'Arial'
+  Font.Style = [fsBold]
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '2.0.12.0'
+  object ParamLabel: TLabel
+    Left = 16
+    Height = 15
+    Top = 17
+    Width = 81
+    Alignment = taRightJustify
+    Caption = '&Parameter File'
+    FocusControl = ParamBox
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    OnClick = ChooseParamFile
+  end
+  object DriverLabel: TLabel
+    Left = 16
+    Height = 15
+    Top = 54
+    Width = 55
+    Alignment = taRightJustify
+    Caption = '&Driver File'
+    FocusControl = DriverBox
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    OnClick = ChooseDriver
+  end
+  object OutputLabel: TLabel
+    Left = 16
+    Height = 15
+    Top = 91
+    Width = 59
+    Alignment = taRightJustify
+    Caption = 'O&utput File'
+    FocusControl = OutputBox
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+    OnClick = ChooseOutputFile
+  end
+  object StartLabel: TLabel
+    Left = 26
+    Height = 15
+    Top = 137
+    Width = 56
+    Alignment = taCenter
+    Caption = '&Start Time'
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object StopLabel: TLabel
+    Left = 216
+    Height = 15
+    Top = 137
+    Width = 56
+    Alignment = taCenter
+    Caption = 'S&top Time'
+    FocusControl = MEStopTime
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object PresentLabel: TLabel
+    Left = 432
+    Height = 15
+    Top = 137
+    Width = 74
+    Alignment = taCenter
+    Caption = 'Present Time'
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object LblWelcome: TLabel
+    Left = 211
+    Height = 15
+    Top = 54
+    Width = 95
+    Caption = 'Welcome to MEL'
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object LblDirections: TLabel
+    Left = 264
+    Height = 19
+    Top = 259
+    Width = 267
+    Caption = 'Please enter the number of species'
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Arial'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object OutputBox: TEdit
+    Left = 151
+    Height = 23
+    Top = 90
+    Width = 434
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    OnExit = ChooseOutputFile
+    OnKeyPress = OutputBoxKeyPress
+    ParentFont = False
+    TabOrder = 1
+  end
+  object DriverBox: TEdit
+    Left = 151
+    Height = 23
+    Top = 51
+    Width = 434
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    OnExit = ChooseDriver
+    OnKeyPress = DriverBoxKeyPress
+    ParentFont = False
+    TabOrder = 0
+  end
+  object MEStopTime: TMaskEdit
+    Left = 200
+    Height = 23
+    Top = 155
+    Width = 99
+    CharCase = ecNormal
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    MaxLength = 7
+    ParentFont = False
+    TabOrder = 2
+    OnExit = MeStopTimeExit
+    OnKeyPress = MEStopTimeKeyPress
+    EditMask = '9999999;0; '
+    Text = '2'
+    SpaceChar = ' '
+  end
+  object ParamBox: TEdit
+    Left = 151
+    Height = 23
+    Top = 14
+    Width = 434
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    OnExit = ChooseParamFile
+    OnKeyPress = ParamBoxKeyPress
+    ParentFont = False
+    TabOrder = 6
+  end
+  object BtnRun: TButton
+    Left = 80
+    Height = 25
+    Top = 208
+    Width = 110
+    Caption = '&Run'
+    Enabled = False
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    OnClick = BtnRunClick
+    ParentFont = False
+    ParentShowHint = False
+    TabOrder = 3
+  end
+  object PresentBox: TEdit
+    Left = 424
+    Height = 23
+    Top = 155
+    Width = 99
+    AutoSelect = False
+    Color = clInactiveBorder
+    Enabled = False
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    ParentFont = False
+    TabStop = False
+    TabOrder = 5
+    Text = '0'
+  end
+  object BtnReload: TButton
+    Left = 416
+    Height = 25
+    Top = 207
+    Width = 121
+    Caption = 'Re&load'
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    OnClick = BtnReloadClick
+    ParentFont = False
+    TabOrder = 4
+  end
+  object EdNumSpecies: TEdit
+    Left = 544
+    Height = 23
+    Top = 256
+    Width = 24
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    OnChange = EdNumSpecieschange
+    OnExit = EdNumSpeciesExit
+    OnKeyPress = EdNumSpeciesKeyPress
+    ParentFont = False
+    TabOrder = 7
+    Visible = False
+  end
+  object MEStartTime: TMaskEdit
+    Left = 16
+    Height = 22
+    Top = 156
+    Width = 99
+    CharCase = ecNormal
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'Arial'
+    MaxLength = 7
+    ParentFont = False
+    TabOrder = 8
+    OnExit = MeStartTimeExit
+    OnKeyPress = MEStartTimeKeyPress
+    EditMask = '9999999;0; '
+    Text = '1'
+    SpaceChar = ' '
+  end
+  object BtnCloseShell: TButton
+    Left = 248
+    Height = 25
+    Top = 207
+    Width = 75
+    Caption = '&Close'
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Arial'
+    OnClick = BtnCloseShellClick
+    ParentFont = False
+    TabOrder = 9
+  end
+  object MainMenu1: TMainMenu
+    Top = 320
+    object MIFiles: TMenuItem
+      Caption = '&Files'
+      object MIParamFile: TMenuItem
+        Caption = '&Parameter File'
+        object MIChooseParam: TMenuItem
+          Caption = '&Open...'
+          OnClick = ChooseParamFile
+        end
+        object MISaveParam: TMenuItem
+          Caption = '&Save...'
+          Enabled = False
+          ShortCut = 16467
+          OnClick = MISaveParamClick
+        end
+        object MISaveAsParam: TMenuItem
+          Caption = 'Save &As'
+          OnClick = MISaveAsParamClick
+        end
+      end
+      object MIDriverFile: TMenuItem
+        Caption = '&Driver File'
+        object MIChooseDrv: TMenuItem
+          Caption = '&Open...'
+          OnClick = ChooseDriver
+        end
+        object MIEditDrv: TMenuItem
+          Caption = '&Edit...'
+          OnClick = MIEditDrvClick
+        end
+      end
+      object MIOutput: TMenuItem
+        Caption = '&Output'
+        object MIChooseOutput: TMenuItem
+          Caption = '&Enter output filename'
+          OnClick = ChooseOutputFile
+        end
+        object MISaveMemOutput: TMenuItem
+          Caption = 'Save output in &memory to file'
+          OnClick = MISaveMemOutputClick
+        end
+      end
+      object MIBar: TMenuItem
+        Caption = '-'
+      end
+      object MIExit: TMenuItem
+        Caption = 'E&xit'
+        OnClick = MIExitClick
+      end
+    end
+    object MIEdit: TMenuItem
+      Caption = '&Edit'
+      object MIEditParam: TMenuItem
+        Caption = '&Parameters...'
+        OnClick = MIEditParamClick
+      end
+      object MIEditStates: TMenuItem
+        Caption = '&State Variables...'
+        OnClick = MIEditStatesClick
+      end
+      object MIEditDrv2: TMenuItem
+        Caption = '&Drivers...'
+        OnClick = MIEditDrvClick
+      end
+    end
+    object MICalculate: TMenuItem
+      Caption = 'C&alculate'
+      Enabled = False
+      Visible = False
+      object MICalTime: TMenuItem
+        Caption = '&At Time...'
+        OnClick = MICalTimeClick
+      end
+      object MICalcSS: TMenuItem
+        Caption = '&Steady State...'
+        OnClick = MICalcSSClick
+      end
+    end
+    object Run1: TMenuItem
+      Caption = 'O&ptions'
+      object MITimeSteps: TMenuItem
+        Caption = '&Time Steps'
+        GroupIndex = 1
+        RadioItem = True
+        OnClick = MIOpenOptionsClick
+      end
+      object N3: TMenuItem
+        Caption = '-'
+        GroupIndex = 1
+        RadioItem = True
+      end
+      object MINormalRun: TMenuItem
+        Caption = '&Normal Run'
+        Checked = True
+        GroupIndex = 1
+        RadioItem = True
+        OnClick = MINormalRunClick
+      end
+      object MISpecialRun: TMenuItem
+        Caption = '&Special Run ...'
+        GroupIndex = 1
+        RadioItem = True
+        OnClick = MIOpenOptionsClick
+      end
+      object N1: TMenuItem
+        Caption = '-'
+        GroupIndex = 1
+      end
+      object MIOutOptions: TMenuItem
+        Caption = '&Output Options ...'
+        GroupIndex = 1
+        OnClick = MIOpenOptionsClick
+      end
+    end
+    object MIView: TMenuItem
+      Caption = '&Output'
+      object MIShowChart: TMenuItem
+        Caption = 'C&hart'
+        OnClick = DisplayOutput
+      end
+      object MIShowTable: TMenuItem
+        Caption = 'Ta&ble'
+        OnClick = DisplayOutput
+      end
+      object MIViewOutFile: TMenuItem
+        Caption = 'From &File...'
+        OnClick = MIViewOutFileClick
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object MIAutoChart: TMenuItem
+        Caption = '&AutoChart'
+        Hint = 'Check this to automatically show the chart after a run'
+        OnClick = MIAutoChartClick
+      end
+    end
+    object Help1: TMenuItem
+      Caption = '&Help'
+      object MIAbout: TMenuItem
+        Caption = '&About'
+        OnClick = MIAboutClick
+      end
+    end
+  end
+  object DlgOpenParam: TOpenDialog
+    Title = 'Choose Parameter File'
+    DefaultExt = '.par'
+    Filter = 'Parameter FIles (*.par)|*.par|All Files|*.*'
+    Options = [ofHideReadOnly, ofPathMustExist, ofNoReadOnlyReturn, ofEnableSizing]
+    Left = 32
+    Top = 320
+  end
+  object DlgSaveParam: TSaveDialog
+    Title = 'Save Parameter File'
+    DefaultExt = '.par'
+    Filter = 'Parameter Files (*.par)|*.par|All Files|*.*'
+    Options = [ofOverwritePrompt, ofHideReadOnly, ofCreatePrompt, ofNoReadOnlyReturn]
+    Left = 64
+    Top = 320
+  end
+  object DlgOpenDriver: TOpenDialog
+    Title = 'Open Driver File'
+    DefaultExt = '.drr'
+    Filter = 'Driver files (*.drr)|*.drr|All files|*.*'
+    Options = [ofHideReadOnly, ofPathMustExist, ofCreatePrompt, ofNoReadOnlyReturn]
+    Left = 96
+    Top = 320
+  end
+  object DlgSaveDriver: TSaveDialog
+    Title = 'Save Driver File as'
+    DefaultExt = '.drr'
+    Filter = 'Driver Files (*.drr)|*.drr|All Files (*.*)|*.*'
+    Options = [ofOverwritePrompt, ofHideReadOnly, ofPathMustExist, ofCreatePrompt, ofNoReadOnlyReturn]
+    Left = 128
+    Top = 320
+  end
+  object DlgSaveOutput: TSaveDialog
+    Title = 'Save Output File as'
+    DefaultExt = '.out'
+    Filter = 'Output Files (*.out)|*.out|All Files (*.*)|*.*'
+    Options = [ofOverwritePrompt, ofHideReadOnly, ofPathMustExist, ofNoReadOnlyReturn]
+    Left = 192
+    Top = 320
+  end
+  object DlgOpenOutput: TOpenDialog
+    Title = 'Open Output File'
+    DefaultExt = '.out'
+    Filter = 'Output Files (*.out)|*.out|All Files (*.*)|*.*'
+    Options = [ofHideReadOnly, ofPathMustExist, ofFileMustExist, ofNoReadOnlyReturn, ofEnableSizing]
+    Left = 160
+    Top = 320
+  end
+end

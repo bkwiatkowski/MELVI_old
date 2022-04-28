@@ -1,0 +1,453 @@
+object FmOptions: TFmOptions
+  Left = -1137
+  Height = 330
+  Top = 465
+  Width = 740
+  BorderStyle = bsSingle
+  Caption = 'Run and Output Options'
+  ClientHeight = 330
+  ClientWidth = 740
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Arial'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '2.2.0.4'
+  object BtnCancel: TButton
+    Left = 500
+    Height = 25
+    Top = 272
+    Width = 75
+    Cancel = True
+    Caption = '&Cancel'
+    ModalResult = 2
+    OnClick = BtnCancelClick
+    TabOrder = 2
+  end
+  object BtnOK: TButton
+    Left = 408
+    Height = 25
+    Top = 272
+    Width = 74
+    Caption = 'O&K'
+    ModalResult = 1
+    OnClick = BtnOKClick
+    TabOrder = 1
+  end
+  object BtnDefaults: TButton
+    Left = 17
+    Height = 24
+    Top = 272
+    Width = 88
+    Caption = 'De&faults'
+    OnClick = BtnDefaultsClick
+    TabOrder = 3
+  end
+  object PcOptions: TPageControl
+    Left = 0
+    Height = 257
+    Top = 0
+    Width = 740
+    ActivePage = TsRunOptions
+    Align = alTop
+    TabIndex = 0
+    TabOrder = 0
+    object TsRunOptions: TTabSheet
+      Caption = 'Run Options'
+      ClientHeight = 230
+      ClientWidth = 732
+      object LblTimeUnit2: TLabel
+        Left = 254
+        Height = 14
+        Top = 64
+        Width = 49
+        AutoSize = False
+        Caption = 'da&ys'
+        FocusControl = EdRepeatDriveTime
+      end
+      object LblTimeUnit1: TLabel
+        Left = 333
+        Height = 14
+        Top = 97
+        Width = 44
+        AutoSize = False
+        Caption = 'd&ays'
+        FocusControl = EdResetStateTime
+      end
+      object LblSSCriteria: TLabel
+        Left = 32
+        Height = 14
+        Top = 192
+        Width = 174
+        Alignment = taRightJustify
+        AutoSize = False
+        Caption = '&Percent error at steady state'
+        FocusControl = EdSSCriteria
+        Visible = False
+      end
+      object LblSSTime: TLabel
+        Left = 319
+        Height = 14
+        Top = 192
+        Width = 171
+        Alignment = taRightJustify
+        AutoSize = False
+        Caption = 'T&ime to check steady state'
+        FocusControl = EdSSTime
+        Visible = False
+      end
+      object RbNormalRun: TRadioButton
+        Left = 8
+        Height = 19
+        Top = 10
+        Width = 75
+        Caption = '&Normal Run'
+        Checked = True
+        OnClick = RbNormalRunClick
+        TabOrder = 0
+        TabStop = True
+      end
+      object RbSpecialRun: TRadioButton
+        Left = 8
+        Height = 19
+        Top = 40
+        Width = 189
+        Caption = '&Special Run (Select options below)'
+        OnClick = RbNormalRunClick
+        TabOrder = 1
+      end
+      object CbRepeatDrivers: TCheckBox
+        Left = 32
+        Height = 19
+        Top = 64
+        Width = 125
+        Caption = 'Repeat &drivers every '
+        Enabled = False
+        OnClick = CbRepeatDriversClick
+        TabOrder = 2
+      end
+      object EdRepeatDriveTime: TEdit
+        Left = 184
+        Height = 22
+        Top = 60
+        Width = 65
+        Enabled = False
+        OnExit = EdRepeatDriveTimeExit
+        OnKeyPress = EdRepeatDriveTimeKeyPress
+        TabOrder = 3
+      end
+      object CbResetStates: TCheckBox
+        Left = 32
+        Height = 19
+        Top = 96
+        Width = 200
+        Caption = '&Reset selected state variables every '
+        Enabled = False
+        OnClick = CbResetStatesClick
+        TabOrder = 4
+      end
+      object EdResetStateTime: TEdit
+        Left = 264
+        Height = 22
+        Top = 93
+        Width = 65
+        Enabled = False
+        OnExit = EdResetStateTimeExit
+        OnKeyPress = EdResetStateTimeKeyPress
+        TabOrder = 5
+      end
+      object BtnOpenStates: TButton
+        Left = 424
+        Height = 41
+        Top = 104
+        Width = 297
+        Caption = 'Ch&oose state variables to reset or hold constant...'
+        OnClick = BtnOpenStatesClick
+        TabOrder = 7
+      end
+      object CbRuntoSS: TCheckBox
+        Left = 32
+        Height = 19
+        Top = 161
+        Width = 119
+        Caption = 'Run to S&teady State.'
+        OnClick = CbRuntoSSClick
+        OnKeyPress = CbRuntoSSKeyPress
+        TabOrder = 8
+        Visible = False
+      end
+      object EdSSCriteria: TEdit
+        Left = 212
+        Height = 22
+        Top = 189
+        Width = 65
+        OnExit = EdSSCriteriaExit
+        OnKeyPress = EdSSCriteriaKeyPress
+        TabOrder = 9
+        Visible = False
+      end
+      object EdSSTime: TEdit
+        Left = 496
+        Height = 22
+        Top = 189
+        Width = 65
+        OnExit = EdSSTimeExit
+        OnKeyPress = EdSSTimeKeyPress
+        TabOrder = 10
+        Visible = False
+      end
+      object CbHoldStatesConstant: TCheckBox
+        Left = 32
+        Height = 19
+        Top = 128
+        Width = 204
+        Caption = '&Hold selected state variables constant'
+        Enabled = False
+        OnClick = CbHoldStatesConstantClick
+        TabOrder = 6
+      end
+    end
+    object TsOutputOptions: TTabSheet
+      Caption = 'Output Options'
+      ClientHeight = 230
+      ClientWidth = 732
+      ImageIndex = 1
+      object Panel1: TPanel
+        Left = 0
+        Height = 114
+        Top = 0
+        Width = 732
+        Align = alTop
+        BevelOuter = bvNone
+        BorderStyle = bsSingle
+        ClientHeight = 110
+        ClientWidth = 728
+        TabOrder = 0
+        object LblTimeUnit3: TLabel
+          Left = 196
+          Height = 14
+          Top = 14
+          Width = 134
+          Alignment = taCenter
+          Caption = 'months, &beginning at month '
+          FocusControl = EdOutputOffset
+        end
+        object LblYearlyCaution: TLabel
+          Left = 224
+          Height = 14
+          Top = 77
+          Width = 495
+          Caption = 'Only valid with daily models. Code must calculate the day of the year and store it in variable dayofyear.'
+          Visible = False
+          WordWrap = True
+        end
+        object RbOutputIntervals: TRadioButton
+          Left = 8
+          Height = 19
+          Top = 14
+          Width = 86
+          Caption = 'O&utput every '
+          Checked = True
+          OnClick = RbOutputIntervalsClick
+          TabOrder = 0
+          TabStop = True
+        end
+        object EdOutputTimeStep: TEdit
+          Left = 133
+          Height = 22
+          Top = 11
+          Width = 57
+          OnExit = EdOutputTimeStepExit
+          OnKeyPress = EdOutputTimeStepKeyPress
+          TabOrder = 1
+        end
+        object EdOutputOffset: TEdit
+          Left = 400
+          Height = 22
+          Top = 11
+          Width = 58
+          OnExit = EdOutputOffsetExit
+          OnKeyPress = EdOutputOffsetKeyPress
+          TabOrder = 2
+        end
+        object RbOutEndofRunOnly: TRadioButton
+          Left = 8
+          Height = 19
+          Top = 46
+          Width = 128
+          Caption = 'Output &end of run only'
+          OnClick = RbOutputIntervalsClick
+          TabOrder = 3
+        end
+        object RbOutputIntervalsAnnual: TRadioButton
+          Left = 8
+          Height = 19
+          Top = 78
+          Width = 124
+          Caption = 'Output &yearly on day '
+          OnClick = RbOutputIntervalsClick
+          TabOrder = 4
+          Visible = False
+        end
+        object EdOutputDayofYear: TEdit
+          Left = 144
+          Height = 22
+          Top = 75
+          Width = 68
+          OnExit = EdOutputDayofYearExit
+          OnKeyPress = EdOutputDayofYearKeyPress
+          TabOrder = 5
+          Visible = False
+        end
+      end
+      object CbAppendOutput: TCheckBox
+        Left = 12
+        Height = 19
+        Top = 193
+        Width = 205
+        Caption = '&Append subsequent runs to output file'
+        OnClick = CbAppendOutputClick
+        ParentBidiMode = False
+        TabOrder = 1
+        Visible = False
+      end
+      object CbNoOutputFile: TCheckBox
+        Left = 13
+        Height = 19
+        Top = 161
+        Width = 228
+        Caption = '&No output file, output stored in memory only'
+        OnClick = CbNoOutputFileClick
+        TabOrder = 2
+      end
+      object CbxWriteEvery: TCheckBox
+        Left = 13
+        Height = 19
+        Top = 127
+        Width = 138
+        Caption = '&Write output to file every'
+        OnClick = CbxWriteEveryClick
+        TabOrder = 3
+      end
+      object EdWriteEvery: TEdit
+        Left = 156
+        Height = 22
+        Top = 125
+        Width = 57
+        OnExit = EdWriteEveryExit
+        OnKeyPress = EdWriteEveryKeyPress
+        TabOrder = 4
+        Text = '0'
+      end
+      object LblTimeUnit6: TLabel
+        Left = 220
+        Height = 14
+        Top = 129
+        Width = 38
+        Alignment = taCenter
+        Caption = 'months.'
+        FocusControl = EdOutputOffset
+      end
+    end
+    object TsTimeSteps: TTabSheet
+      Caption = 'Time Steps'
+      ClientHeight = 230
+      ClientWidth = 732
+      ImageIndex = 2
+      object LblTimeStep: TLabel
+        Left = 11
+        Height = 14
+        Top = 40
+        Width = 134
+        Alignment = taRightJustify
+        AutoSize = False
+        Caption = '&Integrator Time Step'
+        FocusControl = METimeStep
+      end
+      object LblDiscreteStep: TLabel
+        Left = 11
+        Height = 14
+        Top = 88
+        Width = 134
+        Alignment = taRightJustify
+        AutoSize = False
+        Caption = 'Discrete Time Step'
+        FocusControl = MEDiscreteStep
+      end
+      object LblTimeUnit4: TLabel
+        Left = 256
+        Height = 14
+        Top = 41
+        Width = 121
+        AutoSize = False
+        Caption = 'LblTimeUnit4'
+      end
+      object LblErrorMult: TLabel
+        Left = 11
+        Height = 14
+        Top = 168
+        Width = 134
+        Alignment = taRightJustify
+        AutoSize = False
+        Caption = 'Error Multiplier'
+        FocusControl = MeErrorMult
+      end
+      object LblErrorMult2: TLabel
+        Left = 256
+        Height = 14
+        Top = 169
+        Width = 289
+        AutoSize = False
+        Caption = 'integer, larger values allow larger errors'
+      end
+      object METimeStep: TMaskEdit
+        Left = 151
+        Height = 22
+        Top = 37
+        Width = 99
+        MaxLength = 5
+        TabOrder = 0
+        OnExit = METimeStepExit
+        OnKeyPress = METimeStepKeyPress
+        EditMask = 'ccccc;0; '
+        Text = '1'
+        SpaceChar = ' '
+      end
+      object MEDiscreteStep: TMaskEdit
+        Left = 151
+        Height = 22
+        Top = 85
+        Width = 99
+        MaxLength = 5
+        TabOrder = 1
+        OnExit = MEDiscreteStepExit
+        OnKeyPress = MEDiscreteStepKeyPress
+        EditMask = 'ccccc;0; '
+        Text = '1'
+        SpaceChar = ' '
+      end
+      object MeErrorMult: TMaskEdit
+        Left = 151
+        Height = 22
+        Top = 165
+        Width = 99
+        MaxLength = 0
+        TabOrder = 2
+        OnExit = MeErrorMultExit
+        OnKeyPress = MeErrorMultKeyPress
+        Text = '1'
+        SpaceChar = '_'
+      end
+    end
+  end
+  object LblTimeUnit5: TLabel
+    Left = 264
+    Height = 14
+    Top = 112
+    Width = 121
+    AutoSize = False
+    Caption = 'LblTimeUnit5'
+  end
+end

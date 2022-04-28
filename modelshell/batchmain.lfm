@@ -1,0 +1,131 @@
+object FmBatchMain: TFmBatchMain
+  Left = 174
+  Height = 441
+  Top = 129
+  Width = 838
+  Caption = 'Modelshell Batch Mode Utility'
+  ClientHeight = 441
+  ClientWidth = 838
+  Color = clBtnFace
+  DesignTimePPI = 144
+  Font.Color = clWindowText
+  Font.Height = -17
+  Font.Name = 'MS Sans Serif'
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '2.0.12.0'
+  object LblBatchFile: TLabel
+    Left = 72
+    Height = 20
+    Top = 252
+    Width = 110
+    Caption = '&Batch file name'
+    FocusControl = EdBatchFile
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'MS Sans Serif'
+    ParentColor = False
+    ParentFont = False
+    OnClick = LblBatchFileClick
+  end
+  object LblNumSpecies: TLabel
+    Left = 72
+    Height = 20
+    Top = 348
+    Width = 135
+    Caption = '&Number of Species'
+    FocusControl = EdNumSpecies
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'MS Sans Serif'
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+    OnClick = LblBatchFileClick
+  end
+  object EdBatchFile: TEdit
+    Left = 72
+    Height = 28
+    Top = 288
+    Width = 542
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'MS Sans Serif'
+    OnExit = ChooseBatchFile
+    ParentFont = False
+    TabOrder = 0
+  end
+  object MmDescription: TMemo
+    Left = 12
+    Height = 218
+    Top = 12
+    Width = 818
+    Color = clScrollBar
+    Font.Color = clWindowText
+    Font.Height = -18
+    Font.Name = 'MS Sans Serif'
+    Lines.Strings = (
+      'This Utility runs modelshell in batch mode. Batch mode allows the user to run multiple simulations without user '
+      'intervention.'
+      ''
+      'Enter the batch file name below, specifing the full path to the file. The batch file is a comma delimited ASCII file.  '
+      'The first row of the batch file is used for variable headings and is ignored. The parameter and driver files must be '
+      'located in the same directory as the batch file. The output files will be created in the same directory as the batch '
+      'file. Do not specify the full path names in the batch file. '
+      ''
+      'CAUTION: Any existing output files in the output directory will be overwritten without warning!'
+    )
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 1
+  end
+  object BtnRunBatch: TButton
+    Left = 336
+    Height = 38
+    Top = 372
+    Width = 146
+    Caption = '&Run Batch Job'
+    Enabled = False
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'MS Sans Serif'
+    OnClick = BtnRunBatchClick
+    ParentFont = False
+    TabOrder = 2
+  end
+  object BtnCancelBatch: TButton
+    Left = 504
+    Height = 38
+    Top = 372
+    Width = 112
+    Cancel = True
+    Caption = '&Close'
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'MS Sans Serif'
+    OnClick = BtnCancelBatchClick
+    ParentFont = False
+    TabOrder = 3
+  end
+  object EdNumSpecies: TEdit
+    Left = 72
+    Height = 28
+    Top = 372
+    Width = 62
+    Font.Color = clWindowText
+    Font.Height = -17
+    Font.Name = 'MS Sans Serif'
+    OnChange = EdNumSpeciesChange
+    ParentFont = False
+    TabOrder = 4
+    Visible = False
+  end
+  object DlgOpenBatch: TOpenDialog
+    Title = 'Choose Batch File'
+    DefaultExt = '.bch'
+    Filter = 'Comma Delimited Files|*.csv|Batch File (*.bch)|*.bch|All Files|*.*'
+    Options = [ofHideReadOnly, ofPathMustExist, ofFileMustExist]
+    Left = 744
+    Top = 264
+  end
+end

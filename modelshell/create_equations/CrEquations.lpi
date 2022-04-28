@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="10"/>
+    <PathDelim Value="\"/>
+    <General>
+      <MainUnit Value="0"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1" Active="Default">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="2">
+      <Item1>
+        <PackageName Value="SynEdit"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCL"/>
+      </Item2>
+    </RequiredPackages>
+    <Units Count="6">
+      <Unit0>
+        <Filename Value="CrEquations.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="299"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="crmain.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FmMain"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Crmain"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="126"/>
+        <CursorPos Y="160"/>
+        <UsageCount Value="299"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="stypes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="19" Y="29"/>
+        <UsageCount Value="299"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="crmain.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="6" Y="37"/>
+        <UsageCount Value="49"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="..\..\LazProj\lazxproj_src\templates\mainform.pas"/>
+        <UnitName Value="MainForm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="60"/>
+        <CursorPos Y="84"/>
+        <UsageCount Value="57"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="..\..\LazProj\lazxproj_src\templates\mainform.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="36"/>
+        <UsageCount Value="1"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit5>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="442" TopLine="417"/>
+      </Position1>
+      <Position2>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="417" TopLine="341"/>
+      </Position2>
+      <Position3>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="161" TopLine="130"/>
+      </Position3>
+      <Position4>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="442" TopLine="412"/>
+      </Position4>
+      <Position5>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="582" TopLine="552"/>
+      </Position5>
+      <Position6>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="1894" Column="27" TopLine="1854"/>
+      </Position6>
+      <Position7>
+        <Filename Value="crmain.pas"/>
+      </Position7>
+      <Position8>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="77" Column="23" TopLine="29"/>
+      </Position8>
+      <Position9>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="159" TopLine="137"/>
+      </Position9>
+      <Position10>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="160" TopLine="137"/>
+      </Position10>
+      <Position11>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="161" TopLine="137"/>
+      </Position11>
+      <Position12>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="417" TopLine="391"/>
+      </Position12>
+      <Position13>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="438" TopLine="391"/>
+      </Position13>
+      <Position14>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="159" TopLine="132"/>
+      </Position14>
+      <Position15>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="417" TopLine="304"/>
+      </Position15>
+      <Position16>
+        <Filename Value="crmain.pas"/>
+      </Position16>
+      <Position17>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="80" Column="23" TopLine="32"/>
+      </Position17>
+      <Position18>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="162" Column="13" TopLine="114"/>
+      </Position18>
+      <Position19>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="674" Column="70" TopLine="656"/>
+      </Position19>
+      <Position20>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="77" Column="23" TopLine="46"/>
+      </Position20>
+      <Position21>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="91" Column="35" TopLine="46"/>
+      </Position21>
+      <Position22>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="159" TopLine="102"/>
+      </Position22>
+      <Position23>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="160" TopLine="132"/>
+      </Position23>
+      <Position24>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="200" TopLine="167"/>
+      </Position24>
+      <Position25>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="201" TopLine="167"/>
+      </Position25>
+      <Position26>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="202" TopLine="167"/>
+      </Position26>
+      <Position27>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="160" TopLine="129"/>
+      </Position27>
+      <Position28>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="161" TopLine="129"/>
+      </Position28>
+      <Position29>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="422" TopLine="393"/>
+      </Position29>
+      <Position30>
+        <Filename Value="crmain.pas"/>
+        <Caret Line="159" TopLine="126"/>
+      </Position30>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="CrEquations"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <CodeGeneration>
+      <Optimizations>
+        <OptimizationLevel Value="0"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <DebugInfoType Value="dsDwarf2"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <Verbosity>
+        <ShoLineNum Value="True"/>
+      </Verbosity>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="crmain.pas"/>
+        <Line Value="160"/>
+      </Item1>
+    </BreakPoints>
+    <Watches Count="3">
+      <Item1>
+        <Expression Value="ftempprocess[iproc].name"/>
+      </Item1>
+      <Item2>
+        <Expression Value="apar.name"/>
+      </Item2>
+      <Item3>
+        <Expression Value="avar.name"/>
+      </Item3>
+    </Watches>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

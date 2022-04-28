@@ -1,0 +1,614 @@
+object FmDisplayOutput: TFmDisplayOutput
+  Left = -1
+  Height = 686
+  Top = 50
+  Width = 1070
+  HorzScrollBar.Smooth = True
+  VertScrollBar.Smooth = True
+  ActiveControl = LblEdPar1
+  Caption = 'FmDisplayOutput'
+  ClientHeight = 666
+  ClientWidth = 1070
+  DefaultMonitor = dmMainForm
+  Menu = MmDisplay
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnResize = FormResize
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '1.6.4.0'
+  object SgModelOutput: TStringGrid
+    Left = 0
+    Height = 359
+    Top = 0
+    Width = 1070
+    Align = alClient
+    FixedCols = 0
+    TabOrder = 0
+    Visible = False
+  end
+  object PnlTop: TPanel
+    Left = 0
+    Height = 359
+    Top = 0
+    Width = 1070
+    Align = alClient
+    ClientHeight = 359
+    ClientWidth = 1070
+    TabOrder = 1
+    object PnlTopRight: TPanel
+      Left = 894
+      Height = 357
+      Top = 1
+      Width = 175
+      Align = alRight
+      Anchors = []
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsHomogenousChildResize
+      ChildSizing.ShrinkVertical = crsHomogenousChildResize
+      ClientHeight = 357
+      ClientWidth = 175
+      Constraints.MinWidth = 100
+      TabOrder = 0
+      OnClick = PnlTopRightClick
+      object PnlRerun: TPanel
+        Left = 1
+        Height = 94
+        Top = 262
+        Width = 173
+        Align = alBottom
+        BorderSpacing.InnerBorder = 4
+        ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+        ChildSizing.EnlargeVertical = crsHomogenousChildResize
+        ChildSizing.ShrinkHorizontal = crsHomogenousChildResize
+        ChildSizing.ShrinkVertical = crsHomogenousChildResize
+        ClientHeight = 94
+        ClientWidth = 173
+        ParentColor = False
+        TabOrder = 0
+        object BtnRun: TButton
+          Left = 53
+          Height = 20
+          Top = 60
+          Width = 70
+          Anchors = []
+          BorderSpacing.Around = 2
+          Caption = '&Run'
+          OnClick = BtnRunClick
+          TabOrder = 2
+        end
+        object CbxStates: TCheckBox
+          Left = 10
+          Height = 19
+          Top = 8
+          Width = 51
+          BorderSpacing.Around = 2
+          Caption = '&States'
+          Checked = True
+          OnClick = cbxStatesClick
+          State = cbChecked
+          TabOrder = 0
+        end
+        object CbxParameters: TCheckBox
+          Left = 10
+          Height = 19
+          Top = 32
+          Width = 79
+          BorderSpacing.Around = 2
+          Caption = '&Parameters'
+          OnClick = cbxParamsClick
+          TabOrder = 1
+        end
+      end
+      object PnlParameters: TPanel
+        Left = 1
+        Height = 261
+        Top = 1
+        Width = 173
+        Align = alClient
+        ClientHeight = 261
+        ClientWidth = 173
+        ParentColor = False
+        TabOrder = 1
+        object LblEdPar1: TLabeledEdit
+          Left = 10
+          Height = 23
+          Top = 31
+          Width = 150
+          Alignment = taCenter
+          Anchors = []
+          EditLabel.AnchorSideLeft.Control = LblEdPar1
+          EditLabel.AnchorSideRight.Control = LblEdPar1
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = LblEdPar1
+          EditLabel.Left = 10
+          EditLabel.Height = 15
+          EditLabel.Top = 13
+          EditLabel.Width = 150
+          EditLabel.Caption = 'Parameter &1'
+          EditLabel.ParentColor = False
+          TabOrder = 0
+          OnDblClick = lblParClick
+          OnExit = LblEdParExit
+          OnKeyPress = LblEdParKeyPress
+        end
+        object LblEdPar2: TLabeledEdit
+          Left = 10
+          Height = 23
+          Top = 85
+          Width = 150
+          Alignment = taCenter
+          Anchors = []
+          EditLabel.AnchorSideLeft.Control = LblEdPar2
+          EditLabel.AnchorSideRight.Control = LblEdPar2
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = LblEdPar2
+          EditLabel.Left = 10
+          EditLabel.Height = 15
+          EditLabel.Top = 67
+          EditLabel.Width = 150
+          EditLabel.Caption = 'Parameter &2'
+          EditLabel.ParentColor = False
+          TabOrder = 1
+          OnDblClick = lblParClick
+          OnExit = LblEdParExit
+          OnKeyPress = LblEdParKeyPress
+        end
+        object LblEdPar3: TLabeledEdit
+          Left = 10
+          Height = 23
+          Top = 139
+          Width = 150
+          Alignment = taCenter
+          Anchors = []
+          EditLabel.AnchorSideLeft.Control = LblEdPar3
+          EditLabel.AnchorSideRight.Control = LblEdPar3
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = LblEdPar3
+          EditLabel.Left = 10
+          EditLabel.Height = 15
+          EditLabel.Top = 121
+          EditLabel.Width = 150
+          EditLabel.Caption = 'Parameter &3'
+          EditLabel.ParentColor = False
+          TabOrder = 2
+          OnDblClick = lblParClick
+          OnExit = LblEdParExit
+          OnKeyPress = LblEdParKeyPress
+        end
+        object LblEdPar4: TLabeledEdit
+          Left = 10
+          Height = 23
+          Top = 185
+          Width = 150
+          Alignment = taCenter
+          Anchors = []
+          EditLabel.AnchorSideLeft.Control = LblEdPar4
+          EditLabel.AnchorSideRight.Control = LblEdPar4
+          EditLabel.AnchorSideRight.Side = asrBottom
+          EditLabel.AnchorSideBottom.Control = LblEdPar4
+          EditLabel.Left = 10
+          EditLabel.Height = 15
+          EditLabel.Top = 167
+          EditLabel.Width = 150
+          EditLabel.Caption = 'Parameter &4'
+          EditLabel.ParentColor = False
+          TabOrder = 3
+          OnDblClick = lblParClick
+          OnExit = LblEdParExit
+          OnKeyPress = LblEdParKeyPress
+        end
+      end
+    end
+    object ChOutput: TChart
+      Left = 1
+      Height = 357
+      Top = 1
+      Width = 893
+      AxisList = <      
+        item
+          Minors = <>
+          Title.LabelFont.Orientation = 900
+          Title.Visible = True
+        end      
+        item
+          Alignment = calBottom
+          Minors = <>
+          Title.Visible = True
+        end>
+      Foot.Brush.Color = clBtnFace
+      Foot.Font.Color = clBlue
+      Legend.Visible = True
+      Title.Brush.Color = clBtnFace
+      Title.Font.Color = clBlue
+      Title.Text.Strings = (
+        'TAChart'
+      )
+      Align = alClient
+      Anchors = []
+      object ChOutputLineSeries1: TLineSeries
+        LineType = ltNone
+        Pointer.Brush.Style = bsClear
+        Pointer.Style = psCircle
+        ShowPoints = True
+        Source = ListChartSource1
+      end
+      object ChOutputLineSeries2: TLineSeries
+        Marks.LinkPen.Color = clRed
+        LinePen.Color = clRed
+        LineType = ltNone
+        Pointer.Brush.Color = clRed
+        Pointer.Pen.Color = clRed
+        ShowPoints = True
+        Source = ListChartSource2
+      end
+      object ChOutputLineSeries3: TLineSeries
+        LinePen.Color = clBlue
+        LineType = ltNone
+        Pointer.Brush.Color = clBlue
+        Pointer.Pen.Color = clBlue
+        Pointer.Style = psCross
+        ShowPoints = True
+        Source = ListChartSource3
+      end
+      object ChOutputLineSeries4: TLineSeries
+        LinePen.Color = clGreen
+        LineType = ltNone
+        Pointer.Brush.Color = clGreen
+        Pointer.Pen.Color = clGreen
+        Pointer.Style = psDiagCross
+        ShowPoints = True
+        Source = ListChartSource4
+      end
+      object ChOutputLineSeries5: TLineSeries
+        LinePen.Color = clYellow
+        LineType = ltNone
+        Pointer.Brush.Color = clYellow
+        Pointer.Style = psTriangle
+        ShowPoints = True
+        Source = ListChartSource5
+      end
+      object ChOutputLineSeries6: TLineSeries
+        LinePen.Color = clMaroon
+        LineType = ltNone
+        Pointer.Brush.Color = clMaroon
+        Pointer.Pen.Color = clMaroon
+        ShowPoints = True
+        Source = ListChartSource6
+      end
+      object ChOutputLineSeries7: TLineSeries
+        LinePen.Color = clSilver
+        LineType = ltNone
+        Pointer.Brush.Color = clSilver
+        Pointer.Pen.Color = clSilver
+        Pointer.Style = psDiamond
+        ShowPoints = True
+        Source = ListChartSource7
+      end
+      object ChOutputLineSeries8: TLineSeries
+        LinePen.Color = clAqua
+        LineType = ltNone
+        Pointer.Brush.Color = clAqua
+        Pointer.Style = psLeftBracket
+        ShowPoints = True
+        Source = ListChartSource8
+      end
+      object ChOutputLineSeries9: TLineSeries
+        LinePen.Color = clPurple
+        LineType = ltNone
+        Pointer.Brush.Color = clPurple
+        Pointer.Pen.Color = clPurple
+        Pointer.Style = psStar
+        ShowPoints = True
+        Source = ListChartSource9
+      end
+      object ChOutputLineSeries10: TLineSeries
+        LinePen.Color = clLime
+        LineType = ltNone
+        Pointer.Brush.Color = clLime
+        Pointer.Pen.Color = clLime
+        Pointer.Style = psCircle
+        ShowPoints = True
+        Source = ListChartSource10
+      end
+    end
+  end
+  object SplTopBottom: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 7
+    Top = 359
+    Width = 1070
+    Align = alBottom
+    ResizeAnchor = akBottom
+  end
+  object PnlBottom: TPanel
+    Left = 0
+    Height = 300
+    Top = 366
+    Width = 1070
+    Align = alBottom
+    ClientHeight = 300
+    ClientWidth = 1070
+    TabOrder = 3
+    object PnlBottomLeft: TPanel
+      Left = 1
+      Height = 298
+      Top = 1
+      Width = 892
+      Align = alClient
+      ClientHeight = 298
+      ClientWidth = 892
+      TabOrder = 0
+      object LblDirections: TLabel
+        Left = 4
+        Height = 15
+        Top = 4
+        Width = 884
+        Align = alTop
+        BorderSpacing.Around = 3
+        Caption = 'Select a maximum of 10 series to plot.'
+        ParentColor = False
+      end
+      object LbxSeriesSelect: TListBox
+        Left = 3
+        Height = 273
+        Top = 22
+        Width = 886
+        Align = alClient
+        BorderSpacing.Around = 2
+        Columns = 3
+        ExtendedSelect = False
+        ItemHeight = 0
+        MultiSelect = True
+        Sorted = True
+        Style = lbOwnerDrawFixed
+        TabOrder = 0
+      end
+    end
+    object PnlBottomRight: TPanel
+      Left = 893
+      Height = 298
+      Top = 1
+      Width = 176
+      Align = alRight
+      Anchors = []
+      AutoSize = True
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsHomogenousChildResize
+      ChildSizing.ShrinkVertical = crsHomogenousChildResize
+      ClientHeight = 298
+      ClientWidth = 176
+      TabOrder = 1
+      object RgChartValues: TRadioGroup
+        Left = 1
+        Height = 110
+        Top = 1
+        Width = 174
+        Align = alTop
+        AutoFill = True
+        Caption = 'Plot values as'
+        ChildSizing.LeftRightSpacing = 4
+        ChildSizing.TopBottomSpacing = 4
+        ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+        ChildSizing.EnlargeVertical = crsHomogenousChildResize
+        ChildSizing.ShrinkHorizontal = crsHomogenousChildResize
+        ChildSizing.ShrinkVertical = crsHomogenousChildResize
+        ChildSizing.Layout = cclTopToBottomThenLeftToRight
+        ChildSizing.ControlsPerLine = 3
+        ClientHeight = 90
+        ClientWidth = 170
+        ColumnLayout = clVerticalThenHorizontal
+        ItemIndex = 0
+        Items.Strings = (
+          '&Actual Values (y)'
+          '&Relative Change (y/y0)'
+          'Cu&mulative Change (y-y0) '
+        )
+        OnClick = RgChartValuesClick
+        TabOrder = 0
+      end
+      object PnlChartButtons: TPanel
+        Left = 1
+        Height = 186
+        Top = 111
+        Width = 174
+        Align = alClient
+        BorderStyle = bsSingle
+        ClientHeight = 182
+        ClientWidth = 170
+        TabOrder = 1
+        object BtnClearSeries: TButton
+          Left = 18
+          Height = 25
+          Top = 67
+          Width = 137
+          Anchors = []
+          AutoSize = True
+          Caption = 'C&lear Series Selection'
+          OnClick = BtnClearSeriesClick
+          TabOrder = 1
+        end
+        object BtnUpdateChart: TButton
+          Left = 38
+          Height = 25
+          Top = 19
+          Width = 96
+          Anchors = []
+          AutoSize = True
+          Caption = '&Update Chart'
+          OnClick = BtnUpdateChartClick
+          TabOrder = 0
+        end
+        object BtnCloseDisplay: TButton
+          Left = 38
+          Height = 25
+          Top = 115
+          Width = 96
+          Anchors = []
+          AutoSize = True
+          Caption = '&Close Display'
+          OnClick = BtnCloseDisplayClick
+          TabOrder = 2
+        end
+      end
+    end
+    object SplBottomLR: TSplitter
+      Left = 893
+      Height = 298
+      Top = 1
+      Width = 0
+      Align = alRight
+      ResizeAnchor = akRight
+    end
+  end
+  object MmDisplay: TMainMenu
+    left = 336
+    top = 56
+    object MIWindow: TMenuItem
+      Caption = '&Window'
+      object MIShow: TMenuItem
+        Caption = 'S&how'
+        object MIShowChart: TMenuItem
+          Caption = '&Chart'
+          OnClick = MIShowChange
+        end
+        object MIShowTable: TMenuItem
+          Caption = '&Table'
+          OnClick = MIShowChange
+        end
+      end
+      object MISaveOutput: TMenuItem
+        Caption = '&Save output to file'
+        OnClick = MISaveOutputClick
+      end
+      object MILoadFile: TMenuItem
+        Caption = '&Load from File'
+        OnClick = MILoadFileClick
+      end
+      object MIClose: TMenuItem
+        Caption = '&Close'
+        OnClick = BtnCloseDisplayClick
+      end
+    end
+    object MIChart: TMenuItem
+      Caption = 'C&hart'
+      object MIXaxis: TMenuItem
+        Caption = '&X-axis'
+        object MIXSelect: TMenuItem
+          Caption = '&Select'
+          OnClick = MISelectAxisClick
+        end
+        object MIXScale: TMenuItem
+          Caption = 'S&cale'
+          OnClick = MIScaleClick
+        end
+      end
+      object MIYaxis: TMenuItem
+        Caption = '&Y-axis'
+        object MIYSelect: TMenuItem
+          Caption = '&Select'
+          OnClick = MISelectAxisClick
+        end
+        object MIYScale: TMenuItem
+          Caption = 'S&cale'
+          OnClick = MIScaleClick
+        end
+      end
+      object MIUpdate: TMenuItem
+        Caption = '&Update'
+      end
+      object MIPrintChart: TMenuItem
+        Caption = '&Print Chart'
+        Enabled = False
+        Visible = False
+      end
+    end
+  end
+  object ListChartSource2: TListChartSource
+    Sorted = True
+    left = 48
+    top = 80
+  end
+  object ListChartSource1: TListChartSource
+    Sorted = True
+    left = 84
+    top = 44
+  end
+  object ListChartSource6: TListChartSource
+    Sorted = True
+    left = 172
+    top = 50
+  end
+  object ListChartSource7: TListChartSource
+    Sorted = True
+    left = 180
+    top = 110
+  end
+  object ListChartSource3: TListChartSource
+    Sorted = True
+    left = 81
+    top = 169
+  end
+  object ListChartSource8: TListChartSource
+    Sorted = True
+    left = 171
+    top = 170
+  end
+  object ListChartSource4: TListChartSource
+    Sorted = True
+    left = 71
+    top = 242
+  end
+  object ListChartSource9: TListChartSource
+    Sorted = True
+    left = 173
+    top = 241
+  end
+  object ListChartSource10: TListChartSource
+    Sorted = True
+    left = 175
+    top = 303
+  end
+  object ListChartSource5: TListChartSource
+    Sorted = True
+    left = 79
+    top = 311
+  end
+  object ChartToolset1: TChartToolset
+    left = 556
+    top = 84
+    object ChartToolset1ZoomClickTool1: TZoomClickTool
+      ZoomFactor = 2
+      ZoomRatio = 2
+    end
+    object ChartToolset1PanClickTool1: TPanClickTool
+    end
+    object ChartToolset1PanDragTool1: TPanDragTool
+    end
+    object ChartToolset1ZoomDragTool1: TZoomDragTool
+    end
+  end
+  object ChLAxisTransforms: TChartAxisTransformations
+    left = 518
+    top = 207
+    object ChLAxisLogarithm: TLogarithmAxisTransform
+      Enabled = False
+      Base = 10
+    end
+    object ChLAxisAutoScale: TAutoScaleAxisTransform
+    end
+  end
+  object ChBAxisTransforms: TChartAxisTransformations
+    left = 511
+    top = 283
+    object ChBAxisLogarithm: TLogarithmAxisTransform
+      Enabled = False
+      Base = 10
+    end
+    object ChBAxisAutoScale: TAutoScaleAxisTransform
+    end
+  end
+end
